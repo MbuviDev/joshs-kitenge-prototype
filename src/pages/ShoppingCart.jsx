@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ankara from "../assets/IMG-20241104-WA0098.jpg"
 import ankara1 from "../assets/IMG-20241104-WA0100.jpg"
-import { Link } from "react-router-dom";
+
 
 const initialProducts = [
   {
