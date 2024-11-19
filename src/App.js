@@ -20,14 +20,15 @@ function App() {
   const removeFromCart = (productId) => {
     setCartItems((prevItems) => prevItems.filter(item => item.id !== productId));
   };
+
   return (
     <Router>
         <Navbar />
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element= {<Checkout cartItems={cartItems}  />} />
-        <Route path="/cart" element={<ShoppingCart />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/cart" element={<ShoppingCart cartItems={cartItems} removeFromCart={removeFromCart} />} />
+        <Route path="/products" element={<Products addToCart={addToCart}/>} />
         <Route path="/about" element={<AboutPage/>} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/kitenge-fabric" element={<KitengeFabricPage />} />
